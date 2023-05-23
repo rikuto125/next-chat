@@ -1,0 +1,28 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# SSHの設定
+RUN apk add --no-cache openssh-server \
+    && ssh-keygen -A \
+    && adduser -D developer \
+    && echo "developer:password" | chpasswd \
+    && mkdir -p /home/developer/.ssh
+
+# 公開鍵のコピー
+COPY id_rsa.pub /home/developer/.ssh/authorized_keys
+
+RUN chown -R developer:developer /home/developer/.ssh \
+    && chmod 700 /home/developer/.ssh \
+    && chmod 600 /home/developer/.ssh/authorized_keys
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd","-D"]
+
