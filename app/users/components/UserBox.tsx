@@ -1,9 +1,12 @@
+"use client";
+
 import axios from "axios";
-import React, { useCallback, useState } from "react";
-import { useRouter } from "next/navigation";
 import { User } from "@prisma/client";
+import { useRouter } from "next/navigation";
+import React, { useCallback, useState } from "react";
 
 import Avatar from "@/app/components/Avatar";
+import LoadingModal from "@/app/components/LoadingModal";
 
 interface UserBoxProps {
   data: User;
@@ -17,7 +20,9 @@ const UserBox: React.FC<UserBoxProps> = ({ data }) => {
     setIsLoading(true);
 
     axios
-      .post("/api/conversations", { userId: data.id })
+      .post("/api/conversations", {
+        userId: data.id,
+      })
       .then((data) => {
         router.push(`/conversations/${data.data.id}`);
       })
@@ -26,7 +31,7 @@ const UserBox: React.FC<UserBoxProps> = ({ data }) => {
 
   return (
     <>
-      {/*{isLoading && <LoadingModal />}*/}
+      {isLoading && <LoadingModal />}
       <div
         onClick={handleClick}
         className="
@@ -46,9 +51,23 @@ const UserBox: React.FC<UserBoxProps> = ({ data }) => {
         <Avatar user={data} />
         <div className="min-w-0 flex-1">
           <div className="focus:outline-none">
-            <span className="absolute inset-0" aria-hidden="true" />
-            <div className="flex justify-between items-center mb-1">
-              <p className="text-sm font-medium text-gray-900">{data.name}</p>
+            <div
+              className="
+                flex
+                justify-between
+                items-center
+                mb-1
+              "
+            >
+              <p
+                className="
+                  text-sm
+                  font-medium
+                  text-gray-900
+                "
+              >
+                {data.name}
+              </p>
             </div>
           </div>
         </div>

@@ -1,9 +1,10 @@
-import getConversationById from "../../actions/getConversationById";
-import getMessages from "../../actions/getMessage";
+import getConversationById from "@/app/actions/getConversationById";
+import getMessages from "@/app/actions/getMessages";
 import EmptyState from "@/app/components/EmptyState";
-import Header from "@/app/conversations/[conversationId]/components/Heder";
-import Body from "@/app/conversations/[conversationId]/components/Body";
-import Form from "@/app/conversations/[conversationId]/components/Form";
+
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Form from "./components/Form";
 
 interface IParams {
   conversationId: string;
@@ -15,19 +16,8 @@ const ConversationId = async ({ params }: { params: IParams }) => {
 
   if (!conversation) {
     return (
-      <div
-        className="
-    lg:pl-80
-    h-full
-    "
-      >
-        <div
-          className="
-      h-full
-      flex
-      flex-col
-      "
-        >
+      <div className="lg:pl-80 h-full">
+        <div className="h-full flex flex-col">
           <EmptyState />
         </div>
       </div>
@@ -35,19 +25,8 @@ const ConversationId = async ({ params }: { params: IParams }) => {
   }
 
   return (
-    <div
-      className="
-    lg:pl-80
-    h-full
-    "
-    >
-      <div
-        className="
-      h-full
-      flex
-      flex-col
-      "
-      >
+    <div className="lg:pl-80 h-full">
+      <div className="h-full flex flex-col">
         <Header conversation={conversation} />
         <Body initialMessages={messages} />
         <Form />

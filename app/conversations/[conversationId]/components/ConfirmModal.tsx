@@ -1,15 +1,14 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import Button from "@/app/components/Button";
+import Modal from "@/app/components/Modal";
+import useConversation from "@/app/hooks/useConversation";
 import { Dialog } from "@headlessui/react";
-import { FiAlertTriangle } from "react-icons/fi";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-
-import Button from "@/app/components/Button";
-import useConversation from "@/app/hooks/useConversation";
+import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
-import Modal from "@/app/components/Modal";
+import { FiAlertTriangle } from "react-icons/fi";
 
 interface ConfirmModalProps {
   isOpen?: boolean;
@@ -33,7 +32,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({ isOpen, onClose }) => {
       })
       .catch(() => toast.error("Something went wrong!"))
       .finally(() => setIsLoading(false));
-  }, [router, conversationId, onClose]);
+  }, [conversationId, router, onClose]);
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -54,10 +53,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({ isOpen, onClose }) => {
             sm:w-10
           "
         >
-          <FiAlertTriangle
-            className="h-6 w-6 text-red-600"
-            aria-hidden="true"
-          />
+          <FiAlertTriangle className="h-6 w-6 text-red-600" />
         </div>
         <div
           className="
@@ -70,7 +66,12 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({ isOpen, onClose }) => {
         >
           <Dialog.Title
             as="h3"
-            className="text-base font-semibold leading-6 text-gray-900"
+            className="
+              text-base
+              font-semibold
+              leading-6
+              text-gray-900
+            "
           >
             Delete conversation
           </Dialog.Title>
@@ -82,7 +83,14 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-      <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+      <div
+        className="
+          mt-5
+          sm:mt-4
+          sm:flex
+          sm:flex-row-reverse
+        "
+      >
         <Button disabled={isLoading} danger onClick={onDelete}>
           Delete
         </Button>
