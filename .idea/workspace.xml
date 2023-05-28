@@ -4,33 +4,80 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8424619-db40-45b0-8c55-8c0261c9401b" name="変更" comment="Dockerfile.dev修正">
-      <change afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(site)/components/AuthForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(site)/components/AuthSocialButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(site)/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/inputs/Input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/id_rsa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/id_rsa.pub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/placeholder.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e8424619-db40-45b0-8c55-8c0261c9401b" name="変更" comment="Profile Draw api作成　削除機能追加">
+      <change afterPath="$PROJECT_DIR$/app/api/settings/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ActiveStatus.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/AvatarGroup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/LoadingModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/inputs/Select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/sidebar/SettingsModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/ImageModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/conversations/components/GroupChatModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/conversations/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hooks/useActiveChannel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hooks/useActiveList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/pusher.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/users/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/pusher/auth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/getConversationById.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/getConversationById.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/getConversations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/getConversations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/getCurrentUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/getCurrentUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/getMessage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/getMessages.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/getSession.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/getSession.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/getUsers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/getUsers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/conversations/[conversationId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/conversations/[conversationId]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/conversations/[conversationId]/seen/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/conversations/[conversationId]/seen/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/conversations/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/conversations/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/messages/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/messages/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Avatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EmptyState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EmptyState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/inputs/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/inputs/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sidebar/DesktopItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sidebar/DesktopItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sidebar/DesktopSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sidebar/DesktopSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sidebar/MobileFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sidebar/MobileFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sidebar/MobileItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sidebar/MobileItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sidebar/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/context/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/context/AuthContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/components/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/Body.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/components/ConfirmModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/ConfirmModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/components/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/components/Heder.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/components/MessageBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/MessageBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/components/MessageInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/MessageInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/components/ProfileDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/components/ProfileDrawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/[conversationId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/[conversationId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/components/ConversationBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/components/ConversationBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/components/ConversationList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/components/ConversationList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/conversations/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/conversations/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hooks/useOtherUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/hooks/useOtherUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hooks/useRouters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/hooks/useRoutes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/components/UserBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/components/UserBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/components/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/components/UserList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,25 +90,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/iwairikuto/Developer/NextJsProjects/next-chat/app/(site)&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/iwairikuto/Developer/NextJsProjects/next-chat/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/iwairikuto/Developer/NextJsProjects/next-chat/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev2",
+    "last_opened_file_path": "/Users/iwairikuto/Developer/NextJsProjects/next-chat/app/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/iwairikuto/Developer/NextJsProjects/next-chat/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/iwairikuto/Developer/NextJsProjects/next-chat/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" />
@@ -88,10 +135,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/api" />
+      <recent name="$PROJECT_DIR$/app/components/sidebar" />
+      <recent name="$PROJECT_DIR$/app/conversations" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/(site)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/components" />
+      <recent name="$PROJECT_DIR$/app/conversations/components" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
@@ -111,7 +163,8 @@
       <workItem from="1684857956554" duration="353000" />
       <workItem from="1684919396745" duration="4469000" />
       <workItem from="1684925685398" duration="3911000" />
-      <workItem from="1685023013762" duration="3558000" />
+      <workItem from="1685023013762" duration="56640000" />
+      <workItem from="1685192024025" duration="18289000" />
     </task>
     <task id="LOCAL-00001" summary="dev　環境のinfra構築">
       <created>1684856806654</created>
@@ -134,7 +187,98 @@
       <option name="project" value="LOCAL" />
       <updated>1684858419048</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Auth UI作成">
+      <created>1685026845527</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685026845527</updated>
+    </task>
+    <task id="LOCAL-00005" summary="prisma mongodb　追加">
+      <created>1685030403501</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685030403503</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Account 登録機能追加">
+      <created>1685064540950</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685064540950</updated>
+    </task>
+    <task id="LOCAL-00007" summary="google github login機能追加">
+      <created>1685068323198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685068323198</updated>
+    </task>
+    <task id="LOCAL-00008" summary="AuthContext追加">
+      <created>1685147219297</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685147219297</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Sidebar追加">
+      <created>1685147280739</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685147280739</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Sidebar追加">
+      <created>1685147309420</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685147309420</updated>
+    </task>
+    <task id="LOCAL-00011" summary="User pageとapiを追加">
+      <created>1685147407130</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685147407130</updated>
+    </task>
+    <task id="LOCAL-00012" summary="conversationを追加">
+      <created>1685147446149</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685147446149</updated>
+    </task>
+    <task id="LOCAL-00013" summary="version追加">
+      <created>1685147480225</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685147480225</updated>
+    </task>
+    <task id="LOCAL-00014" summary="chat 1on1機能　既読機能追加">
+      <created>1685155554620</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685155554620</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Profile Draw ui作成">
+      <created>1685170134524</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685170134524</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Profile Draw api作成　削除機能追加">
+      <created>1685172243806</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685172243806</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +288,18 @@
     <MESSAGE value="dev　環境のinfra構築" />
     <MESSAGE value="dev環境のinfra構築" />
     <MESSAGE value="Dockerfile.dev修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile.dev修正" />
+    <MESSAGE value="Auth UI作成" />
+    <MESSAGE value="prisma mongodb　追加" />
+    <MESSAGE value="Account 登録機能追加" />
+    <MESSAGE value="google github login機能追加" />
+    <MESSAGE value="AuthContext追加" />
+    <MESSAGE value="Sidebar追加" />
+    <MESSAGE value="User pageとapiを追加" />
+    <MESSAGE value="conversationを追加" />
+    <MESSAGE value="version追加" />
+    <MESSAGE value="chat 1on1機能　既読機能追加" />
+    <MESSAGE value="Profile Draw ui作成" />
+    <MESSAGE value="Profile Draw api作成　削除機能追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile Draw api作成　削除機能追加" />
   </component>
 </project>
